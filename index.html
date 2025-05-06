@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Vaibav singh">
+        <meta name="description" content="this page contains all things i am learning
+         that how to create as html">
+        <title>Vaibhav First web page</title>
+        <link rel="icon" href="html5.png" type="image/x-icon">
+        <link rel="stylesheet" href="main.css" type="text/css">
+    </head>
+
+    <body>
+  <header>
+      <h1>My Goals for the Year</h1> 
+
+      <nav>
+        <ul>
+          <li>
+            <a href="#html">Learn HTML</a>
+            
+          </li>
+          <li><a href="#vacation">Planning a vacation</a></li>
+        </ul>
+      </nav>
+  </header>
+
+      <hr>
+      <main>
+      <article id="html">
+      
+      <h2>I am ready to learn HTML</h2>  
+      <p>This is my first web page.</p>
+      <section>
+        <h3>HTML 5</h3>
+      <img src="img/image.png" alt="HTML 5 Logo" title="I am learning HTML5" width="259" height="298"><figure>
+        <figcaption>An example of HTML5 code</figcaption>
+        <p>
+          <code>&lt;h1&gt;Hello World!&lt;/h1&gt;</code>
+        </p>
+      </figure>
+      </section>
+      <section>
+      <h3>My daily schedule </h3>  
+      <p>Let me tell you how:</p>
+    <ol>
+      <li>...I learn more about web dev.</li>
+      <li>...I plan out my schedule. </li>
+      <li>...I use resource from <abbr title="Mozilla Developer Network">
+        <a href="https://developer.mozilla.org/">MDN</a></abbr></li>
+    </ol>
+    <aside>
+      <details>
+        <summary>Guess the <mark> numbers of hours</mark> i code every day</summary>
+        <p>
+          i start at 8 and do code till 10
+        </p>
+      </details>
+    </aside>
+    <br>
+    <table>
+      <caption>My Daily Schedule</caption>
+      <thead>
+      <tr>
+        <th>Time</th>
+        <th>Activity</th>
+      </tr>
+    </thead>
+      <tr>
+        <td>
+          <time datetime="08:00">8am</time>-<time datetime="11:00">11am</time>
+        </td>
+        <td>Write Code</td>
+      </tr>
+      <tr>
+        <td>
+          <time datetime="11:00">11am</time>-<time datetime="12:00">12pm</time>
+        </td>
+        <td>Eat Lunch</td>
+      </tr>
+      <tr>
+        <td>
+          <time datetime="12:00">12pm</time>-<time datetime="17:00">5pm</time>
+        </td>
+        <td>Study for other courses</td>
+      </tr>
+      <tr>
+        <td rowspan="2">All other times</td>
+        <td >Free Time</td>
+        
+      </tr>
+      <tr>
+        <td>Sleep</td>
+      </tr>
+    </table>
+  </section>  
+  </article>
+
+      <hr>
+      <article id="vacation">
+      <!--this is comment-->
+
+      <h2>I'm Also Planning a Vacation</h2>  
+      <p>I've been Worling Hard and <em>really need a gateway.</em></p>
+      <p>I live in Greater <abbr title="New Okhla Industrial development area">NOIDA</abbr> so I want travel in mountains and beaches.</p>
+      <section>
+
+      <h3>Places I like to visit</h3>  
+    <ul>
+      <li>I've heared about many countries in the world </li>
+    </ul>
+
+      <figure>
+
+      <img src="img/cariabbian (Phone).jpg" alt="Caribben beach" loading="lazy">
+      <figcaption>
+        Caribbean beach getway
+      </figcaption>
+    </figure>
+      <li>I'd like to visit Europe and some other countries</li>
+      
+    </ul>
+       <address>Japan <br> Russia <br> USA <br> Austrailla <br> France <br> Germany</address>
+       <figure>
+       <img src="img/vacation.jpg" alt="Cancun vacation" title="It's 5 o'clock somewhare" width="400" height="300"  loading="lazy">
+       <figcaption>A Caribbean Vacation</figcaption>
+      </figure>
+    </section>
+
+       <h3>Places I Want to Avoide</h3>
+       <dl>
+        <dt>North Ploe </dt>
+        <dd>I hear this is <strong>cold</strong></dd>
+        <dt>South Pole</dt>
+        <dd>This is also cold</dd>
+        <dt>Mountains Tops</dt>
+        <dd>These are also cold</dd>
+       </dl>
+      </article>
+      <hr>
+      <articl id="contact">
+        <h2>Contact Me</h2>
+        <p>I'd really like to hear from you</p>
+        <form action="https://httpbin.org/get" method="get">
+          <fieldset>
+            <legend>Personal Information</legend>
+          <p>
+          <label for="firstName">First Name:</label>
+          <input type="text" name="firstName" id="firstName" placeholder="Jane" autocomplete="on" required autofocus>
+        </p>
+        <p>
+          <label for="lastName">Last Name:</label>
+          <input type="text" name="lastName" id="lastName" placeholder="Parker" autocomplete="on" required >
+        </p>
+        <p>
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" placeholder="your secret" autocomplete="on" required >
+        </p>
+        <p>
+          <label for="Phone">Phone</label>
+          <input type="tel" name="Phone" id="Phone" placeholder="5555555555" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"required >
+        <p>
+        <p>
+          <label for="decade">Favorite Decade:</label>
+          <input type="number" name="decade" id="decade" min="1950" max="2020" step="10" value="1980">
+        <p>
+        </fieldset>
+        </form>
+
+      </article>
+</main>
+      <hr>
+      <footer>
+        <p>
+      &lt;&lt;&lt;&lt; &copy;<a href="about.html">www.google.com/about.html</a>&gt;&gt;&gt;&gt;
+    </p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+
+    </body>
+
+</html> 
