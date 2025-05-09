@@ -1,0 +1,106 @@
+<!-- homepage.html (Buyer Home Page) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicine Resale - Home</title>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; background:#eef2f7; }
+    .header { background:#2d6a4f; color:#fff; padding:20px; display:flex; align-items:center; justify-content:space-between; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    .logo { font-size:28px; font-weight:bold; cursor:pointer; }
+    .search-bar { flex:1; margin:0 30px; }
+    .search-bar input { width:100%; padding:10px 15px; border-radius:25px; border:none; }
+    .nav-buttons button { margin-left:15px; padding:10px 16px; border:none; border-radius:4px; cursor:pointer; font-weight:bold; }
+    .nav-buttons button.cart { background:#ffd60a; color:#000; }
+    .nav-buttons button.orders { background:#1d3557; color:#fff; }
+
+    .hero { background:url('https://source.unsplash.com/1600x400/?medicine,pharmacy') center/cover no-repeat; height:400px; position:relative; display:flex; align-items:center; justify-content:center; }
+    .hero h1 { color:#fff; font-size:48px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+
+    .container { padding:40px 20px; max-width:1200px; margin:auto; }
+    .section-title { font-size:32px; color:#2d6a4f; margin-bottom:20px; }
+    .products { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:30px; }
+    .product-card { background:#fff; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.1); overflow:hidden; transition:transform .2s; }
+    .product-card:hover { transform: translateY(-5px); }
+    .product-card img { width:100%; height:160px; object-fit:cover; }
+    .info { padding:15px; }
+    .info h4 { margin:8px 0; font-size:18px; color:#1d3557; }
+    .info p { margin:6px 0; color:#2d6a4f; font-weight:bold; }
+    .info button { width:100%; padding:10px; background:#2d6a4f; color:#fff; border:none; border-radius:4px; cursor:pointer; margin-top:10px; }
+    .info button:hover { background:#1b4332; }
+
+    .footer { background:#2d6a4f; color:#fff; text-align:center; padding:20px; margin-top:40px; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo" onclick="location.href='homepage.html'">MediResell</div>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search medicines, brands..." />
+    </div>
+    <div class="nav-buttons">
+      <button class="cart" id="cartBtn">Cart</button>
+      <button class="orders" id="ordersBtn">My Orders</button>
+    </div>
+  </div>
+  <div class="hero">
+    <h1>Reduce Waste, Save Lives</h1>
+  </div>
+  <div class="container">
+    <h2 class="section-title">Popular Medicines</h2>
+    <div class="products">
+      <!-- Example product cards -->
+      <div class="product-card" data-id="1">
+        <img src="https://source.unsplash.com/collection/190727/300x200" alt="Paracetamol" />
+        <div class="info">
+          <h4>Paracetamol</h4>
+          <p>$5.00</p>
+          <button class="viewBtn">View Details</button>
+        </div>
+      </div>
+      <div class="product-card" data-id="2">
+        <img src="https://source.unsplash.com/collection/190727/301x200" alt="Amoxicillin" />
+        <div class="info">
+          <h4>Amoxicillin</h4>
+          <p>$8.00</p>
+          <button class="viewBtn">View Details</button>
+        </div>
+      </div>
+      <div class="product-card" data-id="3">
+        <img src="https://source.unsplash.com/collection/190727/302x200" alt="Ibuprofen" />
+        <div class="info">
+          <h4>Ibuprofen</h4>
+          <p>$6.50</p>
+          <button class="viewBtn">View Details</button>
+        </div>
+      </div>
+      <!-- More products can be added similarly -->
+    </div>
+  </div>
+  <div class="footer">
+    &copy; 2025 MediResell. All rights reserved.
+  </div>
+
+  <script>
+    // Redirect to product page on card click
+    document.querySelectorAll('.viewBtn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var id = this.closest('.product-card').dataset.id;
+        window.location.href = 'product.html?productId=' + id;
+      });
+    });
+    // Search functionality
+    document.getElementById('searchInput').addEventListener('keypress', function(e) {
+      if(e.key === 'Enter') {
+        var query = encodeURIComponent(this.value.trim());
+        if(query) window.location.href = 'search.html?q=' + query;
+      }
+    });
+    document.getElementById('cartBtn').addEventListener('click', function() {
+      window.location.href = 'cart.html';
+    });
+    document.getElementById('ordersBtn').addEventListener('click', function() {
+      window.location.href = 'orders.html';
+    });
+  </script>
