@@ -1,0 +1,33 @@
+
+<!-- selection.html (Buyer/Seller Choice) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicine Resale - Choose Role</title>
+  <style>
+    body { font-family: Arial, sans-serif; display:flex; justify-content:center; align-items:center; height:100vh; margin:0; }
+    .roles { text-align:center; }
+    .roles button { padding:10px 20px; margin:10px; }
+  </style>
+</head>
+<body>
+  <div class="roles">
+    <h2>Are you a Buyer or Seller?</h2>
+    <button id="sellerBtn">Seller</button>
+    <button id="buyerBtn">Buyer</button>
+  </div>
+
+  <script>
+    document.getElementById('sellerBtn').addEventListener('click', function() {
+      window.location.href = 'seller.html';
+    });
+    document.getElementById('buyerBtn').addEventListener('click', function() {
+      // buyer homepage code not present; commenting out
+      // window.location.href = 'buyer.html';
+      alert('Buyer homepage is under construction.');
+    });
+  </script>
+</body>
+</html>

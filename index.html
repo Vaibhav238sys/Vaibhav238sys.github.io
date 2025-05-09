@@ -1,0 +1,39 @@
+<!-- index.html (Homepage / Login Page) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicine Resale - Login</title>
+  <style>
+    body { font-family: Arial, sans-serif; display:flex; justify-content:center; align-items:center; height:100vh; margin:0; }
+    .container { width:300px; }
+    .container input, .container button { width:100%; padding:10px; margin:5px 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button id="loginBtn">Login</button>
+  </div>
+
+  <script>
+    document.getElementById('loginBtn').addEventListener('click', function() {
+      // simple check (placeholder)
+      var user = document.getElementById('username').value;
+      var pass = document.getElementById('password').value;
+      if(user && pass) {
+        window.location.href = 'selection.html';
+      } else {
+        alert('Please enter username and password.');
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+
+
